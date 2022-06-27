@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +19,7 @@ namespace Coding_Graphics
         int ycent = 0;
         PointF Rectangle = new PointF(0, 0);
         float AngleBall = 0;
+        PolarCircle MyCircle = new PolarCircle(0, 0, 100);
       
         public Form1()
         {
@@ -34,7 +35,7 @@ namespace Coding_Graphics
 
         private void T_Tick(object sender, EventArgs e)
         {
-            Rectangle = GetNextPoint(xcent, ycent, 100, AngleBall);
+            Rectangle = MyCircle.GetNextPoint(AngleBall);
             AngleBall += 15;
             DoubeBuffer(this.CreateGraphics());
         }
@@ -42,8 +43,8 @@ namespace Coding_Graphics
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
             
-            xcent = e.X;
-            ycent = e.Y;
+            MyCircle.xce = e.X;
+            MyCircle.yce = e.Y;
             DoubeBuffer(this.CreateGraphics());
             
         }
@@ -67,35 +68,14 @@ namespace Coding_Graphics
         void DrawScene(Graphics g)
         {
             g.Clear(Color.Black);
-            DrawCircle(xcent, ycent, 100, g);
+            MyCircle.DrawCircle(g,1,0);
             g.FillRectangle(Brushes.Yellow, Rectangle.X-5  , Rectangle.Y-5, 20, 20);
             
   
         }
 
-        void DrawCircle(int xce, int yce, int r, Graphics g)
-        {
-            float angle = 0;
-            while (angle < 360)
-            {
-                float thetaRadian = (float)(angle * Math.PI / 180);
-                float x = (float)(r * Math.Cos(thetaRadian)) + xce;
-                float y = (float)(r * Math.Sin(thetaRadian)) + yce;
-                g.FillEllipse(Brushes.Red, x, y, 5, 5);
-                angle++;
-            }
-
-           
-        }
-        PointF GetNextPoint(int xcent, int ycent, int r, float angle)
-        {
-            float thetaRadian = (float)(angle * Math.PI / 180);
-            float x = (float)(r * Math.Cos(thetaRadian)) + xcent;
-            float y = (float)(r * Math.Sin(thetaRadian)) + ycent;
-
-            PointF pnn = new PointF(x,y);
-            return pnn;
-        }
+        
+      
     }
       
 }
