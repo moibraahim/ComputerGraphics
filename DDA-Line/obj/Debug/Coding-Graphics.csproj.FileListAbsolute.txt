@@ -1,0 +1,9 @@
+C:\Users\PC\Desktop\Coding-Graphics\Coding-Graphics\bin\Debug\Coding-Graphics.exe.config
+C:\Users\PC\Desktop\Coding-Graphics\Coding-Graphics\bin\Debug\Coding-Graphics.exe
+C:\Users\PC\Desktop\Coding-Graphics\Coding-Graphics\bin\Debug\Coding-Graphics.pdb
+C:\Users\PC\Desktop\Coding-Graphics\Coding-Graphics\obj\Debug\Coding-Graphics.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\Coding-Graphics\Coding-Graphics\obj\Debug\Coding_Graphics.Properties.Resources.resources
+C:\Users\PC\Desktop\Coding-Graphics\Coding-Graphics\obj\Debug\Coding-Graphics.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\Coding-Graphics\Coding-Graphics\obj\Debug\Coding-Graphics.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Coding-Graphics\Coding-Graphics\obj\Debug\Coding-Graphics.exe
+C:\Users\PC\Desktop\Coding-Graphics\Coding-Graphics\obj\Debug\Coding-Graphics.pdb
